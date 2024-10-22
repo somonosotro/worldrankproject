@@ -1,0 +1,67 @@
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
+/* Reset some default styles */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+    background-color: #1B1D1F;
+}
+body , html {
+    width: 100%;
+    height: 100%;
+}
+a {
+    text-decoration: none;
+    color: inherit;
+}
+* {
+    box-sizing: border-box;
+}
+
+/* -------------------- Header -------------------- */
+.header {
+    display: grid;
+    place-content: center;
+    background-image: url(images/hero-image-wr.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 450px;
+    background-repeat: no-repeat;
+}
+.header > img {
+    display: flex;
+    width: 250px;
+    height: 250px;
+    align-items: center;
+    justify-content: center;
+}
+
+/* -------------------- Main --------------------*/
+.main {
+    background-color: #1B1D1F;
+    width: 100%;
+    height: 100%;
+}
+.contenedor-principal {
+    position: absolute;
+    background-color: #282B30;
+    border: 2px #6C727F;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    margin-left: 75px;
+    margin-right: 75px;
+    top: 400px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+}
+
+/* ---------- Paises ----------*/
+
+.pais {
+    width: 90%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
