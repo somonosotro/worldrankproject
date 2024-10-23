@@ -1,13 +1,22 @@
 @import url('https://fonts.googleapis.com/css2?family=Sora:wght@200;400;500&display=swap');
+:root {
+    --principal : #282B30;
+    --secundario : #1B1D1F;
+    --gris : #6C727F;
+    --gris-claro : #D2D5DA;
+}
 /* Reset some default styles */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
     padding: 0;
-    background-color: #1B1D1F;
 }
 body , html {
     width: 100%;
     height: 100%;
+}
+body {
+    background-color: var(--secundario);
+    font-family: "Be Vietnam Pro", sans-serif;
 }
 a {
     text-decoration: none;
@@ -37,31 +46,142 @@ a {
 
 /* -------------------- Main --------------------*/
 .main {
-    background-color: #1B1D1F;
-    width: 100%;
-    height: 100%;
+    background-color:var(--secundario);
+    width: 95%;
+    height: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: -80px;
+    border: 1px solid #6c727f41;
+    border-radius: 15px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    overflow: hidden;
 }
 .contenedor-principal {
-    position: absolute;
-    background-color: #282B30;
-    border: 2px #6C727F;
-    border-radius: 10px;
     width: 100%;
-    height: 100%;
-    margin-left: 75px;
-    margin-right: 75px;
-    top: 400px;
     display: flex;
+    height: 100%;
     flex-direction: column;
     align-items: center;
     gap: 20px;
+    width: 70%;
+    overflow: hidden;
+    overflow-y: scroll;
 }
-
-/* ---------- Paises ----------*/
-
-.pais {
+.contenedor-principal::-webkit-scrollbar {
+    width: 2px;
+    background-color: #282B30;
+}
+.info {
     width: 90%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    border-bottom: 1px solid #6c727f41;
+    padding: 10px;
+    color: var(--gris);
+    background-color: var(--secundario);
+   
+}
+.order {
+    width: 30%;
+}
+.busqueda {
+    width: 100%;
+    height: 150px;
+}
+.selected {
+    display:none;
+    background-color:var(--secundario);
+    width: 40%;
+    height: 90%;
+    margin: 0 auto;
+    position: relative;
+    top: -80px;
+    border: 1px solid #6c727f41;
+    border-radius: 15px;
+    flex-direction: column;
+    align-items: center;
+    gap: 70px;
+}
+.selected > img {
+    border-radius: 10px;
+    width: 40%;
+    height: 200px;
+    position: relative;
+    top: -70px;
+}
+.selected > div{
+    width: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px;
+    border-bottom: 1px solid #6c727f41;
+}
+.selected > div > p {
+    font-size: 18px;
+    color: var(--gris-claro);
+    text-align: center;
+}
+.selected > div > p:nth-child(1) {
+    color: var(--gris);
+}
+.volver {
+    position: absolute;
+    top: calc(50% - 30px);
+    left: 20px;
+    display: none;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--principal);
+    padding: 10px;
+    text-transform: uppercase;
+    text-align: center;
+    font-size: 18px;
+    color: var(--gris-claro);
+    cursor: pointer;
+    box-shadow:  0 0 60px rgba(0, 0, 0, 0.384);
+}
+.volver:hover {
+    background-color: #383a3d;
+}
+/* ---------- Paises ----------*/
+
+.pais {
+    width: 90%;
+    display: grid;
+    grid-template-columns: repeat(5 , 1fr);
+    align-items: center;
+    color: var(--gris-claro);
+    font-size: 18px;
+    cursor: pointer;
+    border-radius: 10px;
+    padding: 5px;
+}
+.pais:hover {
+    background-color: var(--principal);
+}
+.pais > img {
+    width: 60px;
+    height: 45px;
+    border-radius: 10px;
+}
+.pais > p {
+    text-align: center;
+}
+
+
+/* -------- Animaciones --------*/
+
+@keyframes entrada {
+    0% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
 }
